@@ -1809,7 +1809,7 @@ func (c *configImpl) rbeDir() string {
 	if v, ok := c.environ.Get("RBE_DIR"); ok {
 		return v
 	}
-	return "prebuilts/remoteexecution-client/live/"
+	return "prebuilts/remoteexecution-client/buildbuddyfix/"
 }
 
 func (c *configImpl) rbeReproxy() string {

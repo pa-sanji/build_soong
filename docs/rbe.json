@@ -13,7 +13,7 @@
         "RBE_instance": "[replace with your RBE instance]",
         "RBE_service": "[replace with your RBE service endpoint]",
 
-        "RBE_DIR": "prebuilts/remoteexecution-client/live",
+        "RBE_DIR": "prebuilts/remoteexecution-client/buildbuddyfix",
 
         "RBE_use_application_default_credentials": "true",
 

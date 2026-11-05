@@ -33,7 +33,7 @@ const (
 	DefaultImage = "docker://gcr.io/androidbuild-re-dockerimage/android-build-remoteexec-image@sha256:1eb7f64b9e17102b970bd7a1af7daaebdb01c3fb777715899ef462d6c6d01a45"
 
 	// DefaultWrapperPath is the default path to the remote execution wrapper.
-	DefaultWrapperPath = "prebuilts/remoteexecution-client/live/rewrapper"
+	DefaultWrapperPath = "prebuilts/remoteexecution-client/buildbuddyfix/rewrapper"
 
 	// DefaultPool is the name of the pool to use for remote execution when none is specified.
 	DefaultPool = "default"

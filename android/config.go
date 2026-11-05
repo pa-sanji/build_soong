@@ -2587,7 +2587,7 @@ func (c *config) ApexBootJars() ConfiguredJarList {
 }
 
 func (c *config) RBEWrapper() string {
-	return c.GetenvWithDefault("RBE_WRAPPER", remoteexec.DefaultWrapperPath)
+	return c.GetenvWithDefault("RBE_WRAPPER", remoteexec.DefaultWrapperPath+" -canonicalize_working_dir")
 }
 
 // UseHostMusl returns true if the host target has been configured to build against musl libc.

@@ -74,7 +74,7 @@ func TestNoVarTemplate(t *testing.T) {
 			PoolKey:           "default",
 		},
 	}
-	want := fmt.Sprintf("prebuilts/remoteexecution-client/live/rewrapper --labels=compiler=clang,lang=cpp,type=compile --platform=\"Pool=default,container-image=%s\" --exec_strategy=local --inputs=$in --output_files=$out --env_var_allowlist=LANG,LC_MESSAGES,PYTHONDONTWRITEBYTECODE -- ", DefaultImage)
+	want := fmt.Sprintf("prebuilts/remoteexecution-client/buildbuddyfix/rewrapper --labels=compiler=clang,lang=cpp,type=compile --platform=\"Pool=default,container-image=%s\" --exec_strategy=local --inputs=$in --output_files=$out --env_var_allowlist=LANG,LC_MESSAGES,PYTHONDONTWRITEBYTECODE -- ", DefaultImage)
 	if got := params.NoVarTemplate(DefaultWrapperPath); got != want {
 		t.Errorf("NoVarTemplate() returned\n%s\nwant\n%s", got, want)
 	}
