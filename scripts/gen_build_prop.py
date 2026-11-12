@@ -40,10 +40,10 @@ def get_build_flavor(product_config):
   return build_flavor
 
 def get_build_keys(product_config):
-  default_cert = product_config.get("DefaultAppCertificate", "")
-  if default_cert == "" or default_cert == os.path.join(TEST_KEY_DIR, "testKey"):
-    return "test-keys"
-  return "dev-keys"
+  # Always report release-keys, matching the intent of the build core's
+  # BUILD_KEYS override. The actual signing keys are still taken from
+  # DefaultAppCertificate; only the reported build tag changes.
+  return "release-keys"
 
 def override_config(config):
   if "PRODUCT_BUILD_PROP_OVERRIDES" in config:
